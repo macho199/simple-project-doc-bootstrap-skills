@@ -1,9 +1,10 @@
 # create-skill-codex-project-doc-bootstrap
 
-프로젝트 문서를 최소 구조로 유지하도록 돕는 스킬 2종을 담고 있는 저장소입니다.
+프로젝트 문서를 최소 구조로 유지하도록 돕는 통합 스킬 저장소입니다.
 
-- Codex용 `simple-project-codex-doc-bootstrap`
-- Claude Code용 `simple-project-claude-doc-bootstrap`
+이 저장소의 핵심 스킬은 `simple-project-doc-bootstrap` 하나이며,
+실행 시 먼저 이 프로젝트를 `Codex` 기준으로 운영할지 `Claude Code` 기준으로 운영할지 확인한 뒤,
+그 결과에 따라 규칙 문서를 다르게 선택합니다.
 
 이 프로젝트는 새 프로젝트를 시작할 때, 혹은 기존 문서가 뒤엉킨 저장소를 정리할 때 최소한의 기준 문서만 유지하도록 돕는 데 초점을 맞춥니다. 핵심 목표는 문서를 많이 만드는 것이 아니라, AI와 사람이 다음 작업을 바로 이어갈 수 있을 만큼만 정확하고 최신인 문서를 유지하는 것입니다.
 
@@ -11,24 +12,23 @@
 
 이 저장소에는 다음 구성이 포함되어 있습니다.
 
-- `skills/simple-project-codex-doc-bootstrap/`: Codex용 스킬
-- `skills/simple-project-claude-doc-bootstrap/`: Claude Code용 스킬
-
-각 스킬 폴더에는 아래 구성이 공통으로 들어 있습니다.
-
-- `SKILL.md`: 스킬의 동작 원칙과 실행 절차
-- `README.md`: 스킬 소개와 사용 예시
-- `templates/`: 기본 문서 템플릿
-- `examples/`: 신규/기존 프로젝트 예시
+- `skills/simple-project-doc-bootstrap/SKILL.md`: 스킬의 동작 원칙과 실행 절차
+- `skills/simple-project-doc-bootstrap/README.md`: 스킬 소개와 사용 예시
+- `skills/simple-project-doc-bootstrap/templates/`: 기본 문서 템플릿
+- `skills/simple-project-doc-bootstrap/examples/`: 신규/기존 프로젝트 예시
 
 ## 이 스킬이 다루는 기본 문서
 
-두 스킬 모두 아래 4개 문서를 프로젝트의 최소 기준 문서로 유지하는 방향을 제안합니다.
+스킬은 아래 3개 문서를 공통 기준 문서로 유지합니다.
 
-- Codex 스킬: `AGENTS.md`, `PROJECT.md`, `STATUS.md`, `ARCHITECTURE.md`
-- Claude Code 스킬: `CLAUDE.md`, `PROJECT.md`, `STATUS.md`, `ARCHITECTURE.md`
+- `PROJECT.md`: 목표, 범위, 제약사항
+- `STATUS.md`: 현재 상태와 다음 작업
+- `ARCHITECTURE.md`: 현재 확정된 구조와 설계 결정
 
-차이는 첫 번째 규칙 문서 이름뿐이며, 나머지 철학과 운영 방식은 거의 동일합니다.
+그리고 실행 시 선택된 워크플로우에 따라 아래 둘 중 하나를 규칙 문서로 사용합니다.
+
+- Codex면 `AGENTS.md`
+- Claude Code면 `CLAUDE.md`
 
 ## 핵심 철학
 
@@ -45,12 +45,12 @@
 - 문서가 많아졌지만 어떤 파일이 기준인지 불분명한 프로젝트
 - 맥락 손실 없이 다음 작업을 바로 이어가고 싶은 장기 개발 작업
 
-## 어떤 스킬을 쓰면 되나
+## 동작 방식
 
-- Codex 기반 워크플로우를 쓰면 `simple-project-codex-doc-bootstrap`
-- Claude Code 기반 워크플로우를 쓰면 `simple-project-claude-doc-bootstrap`
-
-기존 단일 스킬 `simple-project-doc-bootstrap`는 두 스킬로 분리되었습니다.
+1. 사용자가 이미 `Codex` 또는 `Claude Code`를 명시했다면 그대로 사용합니다.
+2. 명시되지 않았다면 먼저 어떤 워크플로우로 운영할지 물어봅니다.
+3. Codex면 `AGENTS.md`, Claude Code면 `CLAUDE.md`를 규칙 문서로 선택합니다.
+4. 나머지 공통 문서 `PROJECT.md`, `STATUS.md`, `ARCHITECTURE.md`를 함께 정리합니다.
 
 ## 저장소 구조
 
@@ -58,12 +58,7 @@
 .
 ├── README.md
 └── skills/
-    ├── simple-project-codex-doc-bootstrap/
-    │   ├── README.md
-    │   ├── SKILL.md
-    │   ├── examples/
-    │   └── templates/
-    └── simple-project-claude-doc-bootstrap/
+    └── simple-project-doc-bootstrap/
         ├── README.md
         ├── SKILL.md
         ├── examples/
@@ -72,6 +67,6 @@
 
 ## 시작 방법
 
-Codex에서는 `simple-project-codex-doc-bootstrap` 스킬을, Claude Code에서는 `simple-project-claude-doc-bootstrap` 스킬을 사용해 달라고 요청하면 됩니다.
+`simple-project-doc-bootstrap` 스킬을 사용해 달라고 요청하면 됩니다.
 
-두 스킬 모두 저장소의 현재 상태를 먼저 파악한 뒤, 필요할 경우 최소 문서 세트를 만들거나 기존 문서를 정리하고, 작업 후에는 관련 문서를 현재 상태 기준으로 다시 맞춥니다.
+스킬은 저장소의 현재 상태를 먼저 파악한 뒤, 필요할 경우 최소 문서 세트를 만들거나 기존 문서를 정리하고, 작업 후에는 관련 문서를 현재 상태 기준으로 다시 맞춥니다. 대상 에이전트가 명시되지 않았으면 먼저 `Codex`인지 `Claude Code`인지 확인합니다.
