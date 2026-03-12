@@ -14,6 +14,10 @@
 - `STATUS.md`
 - `ARCHITECTURE.md`
 
+규칙 문서는 별도 템플릿 두 개를 두지 않고,
+공통 템플릿 `templates/RULE_DOC.template.md`에서 `{RULE_DOC_NAME}`을
+`AGENTS.md` 또는 `CLAUDE.md`로 치환해 사용합니다.
+
 ## 핵심 철학
 
 - 문서는 적을수록 좋다

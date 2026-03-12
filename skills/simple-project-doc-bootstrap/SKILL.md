@@ -139,11 +139,13 @@ AI가 프로젝트의 목표, 현재 상태, 구조, 작업 규칙을 잃지 않
 
 문서를 새로 생성하거나 크게 재작성할 때는 `templates/` 아래 템플릿을 출발점으로 사용한다.
 
-- Codex용 규칙 문서: `templates/AGENTS.template.md`
-- Claude Code용 규칙 문서: `templates/CLAUDE.template.md`
+- 규칙 문서 공통 템플릿: `templates/RULE_DOC.template.md`
 - 공통: `templates/PROJECT.template.md`
 - 공통: `templates/STATUS.template.md`
 - 공통: `templates/ARCHITECTURE.template.md`
+
+규칙 문서 템플릿을 사용할 때는 선택된 대상 에이전트에 맞게
+`{RULE_DOC_NAME}`을 `AGENTS.md` 또는 `CLAUDE.md`로 치환한 뒤 사용한다.
 
 템플릿을 기계적으로 채우지 말고 실제 프로젝트 상태에 맞게 간결하게 조정한다.
 
