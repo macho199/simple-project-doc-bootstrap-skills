@@ -1,9 +1,3 @@
-
----
-
-## `.codex/skills/simple-project-doc-bootstrap/templates/AGENTS.template.md`
-
-```md
 # AGENTS
 
 ## 목적

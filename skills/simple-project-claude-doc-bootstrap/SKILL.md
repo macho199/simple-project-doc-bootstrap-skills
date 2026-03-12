@@ -1,9 +1,9 @@
 ---
-name: simple-project-doc-bootstrap
-description: 새 프로젝트 또는 문서가 혼란스러운 기존 프로젝트에서 최소 문서 세트를 초기화하고, 이후 작업 중에도 AGENTS.md, PROJECT.md, STATUS.md, ARCHITECTURE.md만 유지하도록 정리한다.
+name: simple-project-claude-doc-bootstrap
+description: 새 프로젝트 또는 문서가 혼란스러운 기존 프로젝트에서 최소 문서 세트를 초기화하고, 이후 작업 중에도 CLAUDE.md, PROJECT.md, STATUS.md, ARCHITECTURE.md만 유지하도록 정리한다.
 ---
 
-# simple-project-doc-bootstrap
+# simple-project-claude-doc-bootstrap
 
 ## 목적
 
@@ -38,7 +38,7 @@ AI가 프로젝트의 목표, 현재 상태, 구조, 작업 규칙을 잃지 않
 - 문서는 과거 이력을 길게 누적하는 용도가 아니라 현재 상태를 반영하는 용도로 유지한다.
 - 오래된 내용은 남겨두지 말고 갱신하거나 제거한다.
 - 사용자의 최신 요구사항이 기존 문서보다 우선한다.
-- AGENTS.md에는 모든 세션에 공통 적용되는 규칙만 유지한다.
+- CLAUDE.md에는 모든 세션에 공통 적용되는 규칙만 유지한다.
 - 의미 있는 작업이 끝난 뒤에는 관련 문서를 반드시 현행화한다.
 - 문서의 양보다 정확성, 최신성, 역할 분리를 우선한다.
 
@@ -48,7 +48,7 @@ AI가 프로젝트의 목표, 현재 상태, 구조, 작업 규칙을 잃지 않
 
 이 스킬은 기본적으로 아래 4개의 문서만 관리한다.
 
-- `AGENTS.md`
+- `CLAUDE.md`
 - `PROJECT.md`
 - `STATUS.md`
 - `ARCHITECTURE.md`
@@ -59,7 +59,7 @@ AI가 프로젝트의 목표, 현재 상태, 구조, 작업 규칙을 잃지 않
 
 ## 문서별 역할
 
-### AGENTS.md
+### CLAUDE.md
 프로젝트 전반에 공통으로 적용되는 작업 규칙을 기록한다.
 
 포함할 수 있는 내용:
@@ -134,7 +134,7 @@ AI가 프로젝트의 목표, 현재 상태, 구조, 작업 규칙을 잃지 않
 ### 2. 최소 문서 세트 초기화
 필요할 경우 아래 파일만 생성한다.
 
-- `AGENTS.md`
+- `CLAUDE.md`
 - `PROJECT.md`
 - `STATUS.md`
 - `ARCHITECTURE.md`
@@ -151,7 +151,7 @@ AI가 프로젝트의 목표, 현재 상태, 구조, 작업 규칙을 잃지 않
 ### 4. 작업 이후 문서 현행화
 의미 있는 작업이 끝날 때마다 다음 기준으로 문서를 갱신한다.
 
-- 작업 규칙 변경: `AGENTS.md`
+- 작업 규칙 변경: `CLAUDE.md`
 - 목표/범위 변경: `PROJECT.md`
 - 진행 상황 변경: `STATUS.md`
 - 구조/설계 변경: `ARCHITECTURE.md`
@@ -169,11 +169,11 @@ AI가 프로젝트의 목표, 현재 상태, 구조, 작업 규칙을 잃지 않
 
 ---
 
-## AGENTS.md 작성 규칙
+## CLAUDE.md 작성 규칙
 
-- AGENTS.md에는 정해진 형식은 없지만, 짧고 간결하며 사람이 읽기 쉽게 유지한다.
-- AGENTS.md는 모든 세션에서 로드되므로, 프로젝트 전반에 공통으로 적용되는 규칙만 포함한다.
-- 작업별 지시사항, 임시 계획, 진행 중인 세부 내용은 AGENTS.md에 넣지 않는다.
+- CLAUDE.md에는 정해진 형식은 없지만, 짧고 간결하며 사람이 읽기 쉽게 유지한다.
+- CLAUDE.md는 모든 세션에서 로드되므로, 프로젝트 전반에 공통으로 적용되는 규칙만 포함한다.
+- 작업별 지시사항, 임시 계획, 진행 중인 세부 내용은 CLAUDE.md에 넣지 않는다.
 - 프로젝트 목표는 `PROJECT.md`, 현재 진행상황은 `STATUS.md`, 구조와 설계는 `ARCHITECTURE.md`에 기록한다.
 
 ---
@@ -201,7 +201,7 @@ AI가 프로젝트의 목표, 현재 상태, 구조, 작업 규칙을 잃지 않
 
 ## 안티패턴 / 금지 행동
 
-- AGENTS.md를 프로젝트 설명서, 작업 로그, TODO 모음처럼 사용하지 않는다.
+- CLAUDE.md를 프로젝트 설명서, 작업 로그, TODO 모음처럼 사용하지 않는다.
 - STATUS.md를 날짜별 작업 일지처럼 끝없이 누적하지 않는다.
 - ARCHITECTURE.md에 폐기된 설계안이나 검토만 했던 아이디어를 길게 남겨두지 않는다.
 - 같은 내용을 여러 문서에 중복 기록하지 않는다.
@@ -231,7 +231,7 @@ AI가 프로젝트의 목표, 현재 상태, 구조, 작업 규칙을 잃지 않
 
 - 같은 내용을 여러 문서에 중복 기록하지 않는다.
 - STATUS.md를 긴 일지처럼 사용하지 않는다.
-- AGENTS.md에 프로젝트 상세 배경이나 작업별 TODO를 넣지 않는다.
+- CLAUDE.md에 프로젝트 상세 배경이나 작업별 TODO를 넣지 않는다.
 - ARCHITECTURE.md에 폐기된 설계안을 길게 남겨두지 않는다.
 - 사용자가 요청하지 않은 문서 세트를 자동으로 늘리지 않는다.
 - 추정과 사실을 구분 없이 기록하지 않는다.
@@ -242,7 +242,7 @@ AI가 프로젝트의 목표, 현재 상태, 구조, 작업 규칙을 잃지 않
 
 문서를 새로 생성하거나 크게 재작성할 때는 `templates/` 아래 템플릿을 출발점으로 사용한다.
 
-- `templates/AGENTS.template.md`
+- `templates/CLAUDE.template.md`
 - `templates/PROJECT.template.md`
 - `templates/STATUS.template.md`
 - `templates/ARCHITECTURE.template.md`
