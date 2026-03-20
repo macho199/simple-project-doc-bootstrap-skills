@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spec-Driven Doc Bootstrap"
+  short_description: "Bootstrap software spec workflow docs"
+  default_prompt: "Use $spec-driven-doc-bootstrap to set up or maintain spec-driven software project documents."
